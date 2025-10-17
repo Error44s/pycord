@@ -57,6 +57,7 @@ __all__ = (
 # We give type-checkers a concrete Missing type and a generic Maybe[T] = T | Missing
 # without requiring changes to discord.utils.
 if TYPE_CHECKING:
+    from .context import Context
     class _MissingType:  # only exists for type-checkers
         ...
     Missing = _MissingType
